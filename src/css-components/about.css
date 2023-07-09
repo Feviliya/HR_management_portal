@@ -1,0 +1,12 @@
+#about-land{
+    margin: 0% 5%;
+    display: flex;
+    gap: 5%;
+}
+.about-desc{
+    color: white;
+    background-color: rgb(12, 118, 156);
+    padding: 5%;
+    /* border-radius: 5%; */
+    box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.742);
+}
