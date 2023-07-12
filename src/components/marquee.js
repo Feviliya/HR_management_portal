@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css-components/marquee.css'
+import '../assets/css-components/marquee.css'
 function Marquee() {
   return (
     <div className='marq'>

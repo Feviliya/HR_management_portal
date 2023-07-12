@@ -7,19 +7,19 @@
     font-weight: bolder;
 }
 .nav-ele{
-    margin-left: 41%;
+    margin-left: 42.5%;
 }
 .nav-ele .links{
-    padding: 30px;
+    padding: 20px;
     
 }
 .nav-ele .links Button{
-    background-color: rgba(116, 210, 244, 0.945);
-    color: rgb(46, 21, 120);
+    background-color: rgb(12, 118, 156);
+    color: white;
     font-weight: bold;
 }
 .nav-ele .links Button:hover{
-    background-color: rgb(12, 118, 156);
-    color: white;
+    background-color: rgba(116, 210, 244, 0.945);
+    color: rgb(23, 14, 50);
 }
 

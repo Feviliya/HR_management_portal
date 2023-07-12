@@ -1,0 +1,15 @@
+.perf-box{
+    
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+.performance{
+    display: flex;
+    margin-left: 30px;
+}
+.perf-box .boxes{
+    
+    padding: 20px;
+}

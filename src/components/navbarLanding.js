@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import '../css-components/navbarLanding.css'
+import '../assets/css-components/navbarLanding.css'
 import {Button} from '@mui/material'
 class NavbarLanding extends Component{
     render(){

@@ -1,9 +1,19 @@
 import React from 'react'
-
-function EmployeeDash() {
+// import PersonalDetails from '../../components/employee/personalDetails'
+import Navbar from '../../components/employee/navbar'
+import SidePanelEmp from '../../components/employee/sidepanelEmp'
+import DashEmpContents from './EmpDashBoard-contents/dashEmpContents';
+const EmployeeDash = () => {
   return (
     <div>
-        dashboard
+      <div id='display-details' >
+      <Navbar></Navbar>
+      <div style={{'display':"flex"}}>
+      <SidePanelEmp></SidePanelEmp>
+      <DashEmpContents></DashEmpContents>
+
+      </div>
+    </div>
     </div>
   )
 }

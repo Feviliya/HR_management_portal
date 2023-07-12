@@ -1,0 +1,41 @@
+#adminMain{
+    display: flex;
+}
+.undraw{
+    width: 550px;
+    height: 450px;
+    padding-top: 17%;
+    padding-left: 20%;
+}
+.admin-image{
+    background-color: rgb(145, 231, 182);
+    height: 100vh;
+    width: 50%;
+}
+.admin-box{
+    padding: 8% 5% 0% 5%;
+    width: 50%;
+    text-align: center;
+    height: 80.3vh;
+}
+#admin-login-button{
+    width: 30%;
+    background-color:rgb(60, 163, 104) ;
+    padding: 10px;
+    margin: 5%;
+}
+#admin-login-button:hover{
+    background-color:rgb(39, 167, 94) ;
+}
+#admin-myCheckbox{
+    margin-left: -30%;
+}
+.admin-ask{
+    text-align: center;
+    color: rgb(39, 167, 94);
+    font-weight: bolder;
+    font-size: 30px;
+}
+.admin-inp{
+    width: 65%;
+}

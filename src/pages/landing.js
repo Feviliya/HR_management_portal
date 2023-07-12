@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import NavbarLanding from '../components/navbarLanding'
 import About from '../components/about'
-import '../css-components/landingMain.css'
+import '../assets/css-components/landingMain.css'
 import {Blocks} from "react-loader-spinner"
+import Footer from '../components/footer'
 
 const Landing=()=> {
   const [loading,setLoading]=useState(false);
@@ -29,7 +30,7 @@ const Landing=()=> {
     <div className='landing-main'>
         <NavbarLanding></NavbarLanding>
         <About></About>
-        
+        <Footer></Footer>
       </div>
   )
 }
