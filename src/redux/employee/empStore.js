@@ -1,5 +1,7 @@
 import {configureStore} from '@reduxjs/toolkit'
-import {empReducer} from './empReducer'
-export const store=configureStore({
-    reducer:empReducer
+import UserReducer from './userSlice'
+export default configureStore({
+    reducer:{
+        user:UserReducer,
+    }
 })

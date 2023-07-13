@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../assets/css-components/employeecss/myTraining.css'
 import { Button } from '@mui/material'
+import { Link } from 'react-router-dom'
 const Training = () => {
   return (
     <div className='my-training'>
@@ -18,7 +19,9 @@ const Training = () => {
                     
                 </div>
             </div>
-            <Button variant='contained' className='enroll'>Enroll</Button>
+            <Link to='/employee/dashboard/myTraining/course'>
+            <Button variant='contained' style={{'background-color': 'rgb(72, 100, 177)'}} className='enroll'>Open</Button>
+            </Link>
         </div>
     </div>
   )

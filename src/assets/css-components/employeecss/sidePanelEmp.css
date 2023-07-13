@@ -2,7 +2,7 @@
     transform: rotate(-90deg);
 }
 #side-panel-emp{
-    background-color: rgb(176, 240, 248);
+    background-color: rgba(218, 220, 220, 0.674);
     width: 9%;
     display: flex;
     flex-direction: column;
@@ -21,10 +21,13 @@
 }
 #side-panel-emp a{
     text-decoration: none;
-    color: rgb(34, 92, 184);
+    color: rgb(72, 100, 177);
+}
+#side-panel-emp a:hover{
+    color: black;
 }
 #side-panel-emp div:hover{
-    background-color: rgb(132, 225, 232);
+    background-color: rgba(132, 160, 232, 0.632);
 }
 #side-panel-emp div svg{
     fill: rgb(82, 82, 84);

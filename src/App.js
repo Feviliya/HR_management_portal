@@ -12,6 +12,7 @@ import MyPerformance from './pages/employee/EmpDashBoard-contents/myPerformance'
 import MyTraining from './pages/employee/EmpDashBoard-contents/myTraining';
 import MyBenefits from './pages/employee/EmpDashBoard-contents/myBenefit';
 import MySalary from './pages/employee/EmpDashBoard-contents/mySalary';
+import CourseOpen from './components/employee/courseOpen';
 // import TimeSpent from './components/timeSpent';
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path='/employee/dashboard/myTraining' element={<MyTraining></MyTraining>}></Route>
             <Route path='/employee/dashboard/myBenefits' element={<MyBenefits></MyBenefits>}></Route>
             <Route path='/employee/dashboard/mySalary' element={<MySalary></MySalary>}></Route>
+            <Route path='/employee/dashboard/myTraining/course' element={<CourseOpen></CourseOpen>}></Route>
           </Routes>
         </BrowserRouter>
         

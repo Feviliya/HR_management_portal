@@ -6,7 +6,7 @@ const MyPerformance = () => {
   return (
     <div>
         <Navbar></Navbar>
-        <div style={{'display':'flex','width':'100%'}}>
+        <div style={{'display':'flex','width':'95%'}}>
             <SidePanelEmp></SidePanelEmp>
             <Performance></Performance>
         </div>

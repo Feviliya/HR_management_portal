@@ -5,6 +5,9 @@ import { useState,useEffect } from "react";
 import undraw from '../../assets/undraw.svg'
 import '../../assets/css-components/employeecss/employeeLogin.css'
 import {Blocks} from 'react-loader-spinner'
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/employee/userSlice";
+
 const EmployeeMain=()=>{
 
     const [username,setUsername]=useState("");
@@ -20,10 +23,19 @@ const EmployeeMain=()=>{
         event.preventDefault();
         setPassword(event.target.value);
     }
+
+    const dispatch=useDispatch();
     const handleSubmit=(event)=>{
         event.preventDefault();
         setFormErrors(validate({username,password}));
-        localStorage.setItem('Name', username);
+        dispatch(
+            login(
+                {
+                    name:username
+                }
+            )
+        )
+        // localStorage.setItem('Name', username);
         // setIsSubmit(true);
         if(isSubmit===true){
             navigate('/employee/dashboard');

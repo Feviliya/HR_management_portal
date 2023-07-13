@@ -3,10 +3,11 @@
 }
 .dash-emp-contents{
     display: flex;
-    margin: 5%;
+    margin: 1%;
     position: relative;
 }
 .boxes{
+    margin: 5%;
     box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.728);
     position: relative;
 }
@@ -21,6 +22,9 @@
 .user-details{
     padding: 10px 50px;
     width: 50%;
+}
+.user-details a button{
+    background-color: rgb(72, 100, 177);
 }
 .pic-name{
     display: flex;
@@ -43,11 +47,12 @@
     background-color: rgb(72, 100, 177);
     align-items: center;
     border-radius: 10px;
+    align-items: center;
+    text-align: center;
 }
 .sal a button{
     background-color: white;
     color: black;
-    margin-left: 30%;
 }
 .sal button:hover{
     background-color: rgb(209, 212, 212);

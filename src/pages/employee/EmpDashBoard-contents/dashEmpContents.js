@@ -3,16 +3,18 @@ import userImage from '../../../assets/user.png'
 import { Link } from 'react-router-dom'
 import '../../../assets/css-components/employeecss/dashEmpContents.css'
 import { Button } from '@mui/material'
+import { useSelector } from 'react-redux'
+import { selectUser } from '../../../redux/employee/userSlice'
+
 const DashEmpContents = () => {
 
-
-  let uname=localStorage.getItem('Name')
+    const user=useSelector(selectUser);
   return (
     <div className='dash-emp-contents'>
         <div className='user-details boxes'>
             <div className='pic-name'>
             <img alt='userpic' width="100px" src={userImage}></img>
-            <h3>{uname}</h3>
+            <h3>{user.name}</h3>
             </div>
           <br></br>
           <br></br>

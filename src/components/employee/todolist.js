@@ -70,7 +70,7 @@ class ToDo extends Component {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        fontSize: "2rem",
+                        fontSize: "1.4rem",
                     }}
                 >
                     TODO LIST

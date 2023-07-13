@@ -1,9 +1,9 @@
 .nav-emp{
-    background-color: rgb(24, 138, 180);
+    background-color: rgb(72, 100, 177);
     display: flex;
     padding: 20px;
     align-items: center;
-    gap: 65%;
+    gap: 63%;
 }
 .nav-ele-emp .links{
     padding-left: 30px;
@@ -14,10 +14,10 @@
     color: white;
     font-weight: bold;
 }
-.nav-ele-emp .logout button{
-    background-color: rgb(164, 45, 45);
+.nav-ele-emp .logout {
     color: white;
-    font-weight: bold;
+    text-decoration: none;
+    padding-left: 25px;
 }
 .nav-ele-emp .connect button:hover{
     background-color: rgb(103, 181, 82);

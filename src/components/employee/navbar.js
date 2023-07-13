@@ -11,7 +11,7 @@ const Navbar = () => {
         <h1 className='comp-name-emp'>HR Portal</h1>
         <div className='nav-ele-emp'>
             <Link className='links connect' to="/connect"><Button variant='contained'>Connect</Button></Link>
-            <Link className='links logout' to="/"><img width='40px' alt='logout' src={logoutbtn}></img></Link>
+            <Link className='links logout' to="/">Log out</Link>
         </div>
     </div>
   )
