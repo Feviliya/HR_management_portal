@@ -6,7 +6,7 @@ const Training = () => {
     <div className='my-training'>
         <h3>New courses</h3><br></br>
         <div className='train-boxes'>
-            <h4>Kotlin with Celi</h4> 
+            <h4>Kotlin</h4> 
             <p>Learn Mobile Application Development</p>
             <div className='course-date'>
                 <div className='start-date'>

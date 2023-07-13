@@ -14,12 +14,12 @@
     padding-left: 100px;
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    gap: 5%;
     justify-content: space-around;
     
 }
 .user-details{
-    padding: 40px 60px;
+    padding: 10px 50px;
     width: 50%;
 }
 .pic-name{
@@ -29,7 +29,7 @@
 }
 .handbook, .ref{
     
-    padding: 40px;
+    padding: 20px;
 }
 .hand-book,.ref-mat{
     text-decoration: none;
@@ -38,4 +38,17 @@
 }
 .hand-book:hover,.ref-mat:hover{
     color: rgb(43, 198, 226);
+}
+.sal{
+    background-color: rgb(72, 100, 177);
+    align-items: center;
+    border-radius: 10px;
+}
+.sal a button{
+    background-color: white;
+    color: black;
+    margin-left: 30%;
+}
+.sal button:hover{
+    background-color: rgb(209, 212, 212);
 }

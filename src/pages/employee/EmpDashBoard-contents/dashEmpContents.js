@@ -37,6 +37,11 @@ const DashEmpContents = () => {
             <Link to='/ref-materials' className='ref-mat'>Referance materials</Link>
             <p>Locate forms, quick guides, toolkits, manuals and more</p>
         </div>
+        <div className='ref boxes sal'>
+            <Link to='/employee/dashboard/mySalary'>
+                <Button variant='contained'>Check Salary</Button>
+            </Link>
+        </div>
         </div>
         
       </div>

@@ -1,0 +1,11 @@
+.bene-fits{
+    width: 80%;
+    padding: 30px;
+}
+.image-card{
+    width: 30%;
+}
+.health{
+    display: flex;
+    gap: 10%;
+}

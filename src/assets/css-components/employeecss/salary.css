@@ -1,0 +1,32 @@
+.stubs{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    padding: 30px;
+    margin-left: 20px
+}
+.amount{
+    background-color: rgb(99, 99, 219);
+    border-radius: 50%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 50%;
+    align-items: center;
+    color: white;
+}
+.amount p{
+    margin-left: 23%;
+}
+.amount h1{
+    text-align: center;
+    margin-top: 40%;
+    font-weight: bolder;
+}
+.salary{
+    width: 80%;
+    display: flex;
+    margin: 5%;
+    background-color: rgb(223, 249, 242);
+    box-shadow: 2px 2px 4px gray;
+}
