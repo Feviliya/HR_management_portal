@@ -14,10 +14,9 @@
     color: white;
     font-weight: bold;
 }
-.nav-ele-emp .logout {
+.nav-ele-emp a> button {
     color: white;
     text-decoration: none;
-    padding-left: 25px;
 }
 .nav-ele-emp .connect button:hover{
     background-color: rgb(103, 181, 82);

@@ -8,7 +8,8 @@ const MyTraining = () => {
     <div>
       <Navbar></Navbar>
         <div style={{'display':'flex','width':'100%'}}>
-            <SidePanelEmp></SidePanelEmp>
+
+            <SidePanelEmp ></SidePanelEmp>
             <Training></Training>
             <TrainSideBar></TrainSideBar>
         </div>

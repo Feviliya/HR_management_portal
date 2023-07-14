@@ -1,5 +1,7 @@
 import React from 'react'
 import '../../assets/css-components/employeecss/myTraining.css'
+
+import TrainSideBar from '../../components/employee/trainingSideBar'
 import { Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 const Training = () => {
@@ -22,7 +24,9 @@ const Training = () => {
             <Link to='/employee/dashboard/myTraining/course'>
             <Button variant='contained' style={{'background-color': 'rgb(72, 100, 177)'}} className='enroll'>Open</Button>
             </Link>
+
         </div>
+            
     </div>
   )
 }

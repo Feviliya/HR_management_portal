@@ -21,10 +21,8 @@ const UpdateProfile = () => {
     let uname=localStorage.getItem('Name')
     const [open, setOpen] = React.useState(false);
     const navigate=useNavigate();
-    const handleClick = () => {
-      localStorage.setItem('email', email);
-      localStorage.setItem('age', age);
-      localStorage.setItem('dob', dob);
+    const handleClick = (e) => {
+      e.preventDefault();
       setOpen(true);
     };
     const handleMail=(event)=>{
@@ -69,7 +67,7 @@ const UpdateProfile = () => {
             <div className='right-user'>
                 <TextField onChange={handleAge} className='add-user-field' label="Age" variant="outlined" required></TextField>
                 <TextField onChange={handlePwd} className='add-user-field' label="Password" variant="outlined" type='password' required></TextField>
-                <Button variant="contained" onClick={handleClick}>
+                <Button type='submit' variant="contained">
                     Update Profile
                 </Button>
                 <Snackbar  open={open} autoHideDuration={2000} onClose={handleClose}>

@@ -1,32 +1,36 @@
-.stubs{
+.salary{
     display: flex;
     flex-direction: column;
-    width: 60%;
-    justify-content: center;
-    padding: 30px;
-    margin-left: 20px
+    padding: 2%;
+    gap: 5%;
+    width: 45%;
+}
+.stubs{
+    box-shadow: 2px 2px 4px gray;
+    height: 50vh;
+    padding: 2%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 .amount{
-    background-color: rgb(99, 99, 219);
-    border-radius: 50%;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    width: 50%;
-    align-items: center;
-    color: white;
-}
-.amount p{
-    margin-left: 23%;
-}
-.amount h1{
-    text-align: center;
-    margin-top: 40%;
-    font-weight: bolder;
-}
-.salary{
-    width: 80%;
-    display: flex;
-    margin: 5%;
-    background-color: rgb(223, 249, 242);
     box-shadow: 2px 2px 4px gray;
+    padding: 20px;
+    width: 39vh;
+    border-top: 2px solid rgb(45, 45, 163);
+}
+.side-box-sal{
+    display: flex;
+    gap: 5%;
+}
+.sal-out{
+    width: 90%;
+    display: flex;
+    padding: 20px;
+}
+.amount-desc{
+    box-shadow: 2px 2px 4px gray;
+    padding: 20px;
+    margin-top: 13.5%;
+    border-top: 2px solid rgb(45, 163, 161);
 }

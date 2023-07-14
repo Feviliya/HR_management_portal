@@ -7,7 +7,7 @@
     position: relative;
 }
 .boxes{
-    margin: 5%;
+    margin: 2%;
     box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.728);
     position: relative;
 }
@@ -15,7 +15,6 @@
     padding-left: 100px;
     display: flex;
     flex-direction: column;
-    gap: 5%;
     justify-content: space-around;
     
 }
@@ -32,7 +31,6 @@
     gap: 15%;
 }
 .handbook, .ref{
-    
     padding: 20px;
 }
 .hand-book,.ref-mat{

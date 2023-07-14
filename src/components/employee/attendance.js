@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import '../../assets/css-components/employeecss/attendance.css'
 import { Button, TextField } from '@mui/material';
 import Calendar from '../../components/employee/calendar'; 
@@ -28,7 +27,7 @@ const AttendanceContents = () => {
   }
   const handleEndDate=(event)=>{
     // event.preventDefault();
-    setFromDate(event.target.value);
+    setEndDate(event.target.value);
   }
   const [open, setOpen] = React.useState(false);
   const handleSubmit=(event)=>{
@@ -59,7 +58,7 @@ const AttendanceContents = () => {
         <br></br>
         <div className='att-boxes'>
             <h3>No. of Days present</h3>
-            <p>34 days</p>
+            <p>3 days</p>
           </div>
       </div>
         <div className='tabs' >
@@ -72,7 +71,7 @@ const AttendanceContents = () => {
                   </DemoContainer>
                 </LocalizationProvider>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DemoContainer components={['DateField']}  onChange={handleFromDate} value={endDate} required>
+                  <DemoContainer components={['DateField']}  onChange={handleEndDate} value={endDate} required>
                     <DateField label="To" required/>
                   </DemoContainer>
                 </LocalizationProvider>

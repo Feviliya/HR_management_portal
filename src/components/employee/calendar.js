@@ -7,9 +7,9 @@ import { PickersDay } from '@mui/x-date-pickers/PickersDay';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { DayCalendarSkeleton } from '@mui/x-date-pickers/DayCalendarSkeleton';
 
-function getRandomNumber(min, max) {
-  return Math.round(Math.random() * (max - min) + min);
-}
+// function getRandomNumber(min, max) {
+//   return Math.round(Math.random() * (max - min) + min);
+// }
 
 /**
  * Mimic fetch with abort controller https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort
@@ -20,7 +20,7 @@ function fakeFetch(date, { signal }) {
     const timeout = setTimeout(() => {
       const today=new Date();
       const daysInMonth = date.daysInMonth();
-      const daysToHighlight = [];
+      const daysToHighlight = [12,13];
       daysToHighlight.push(today.getDate())
       resolve({ daysToHighlight });
     }, 500);

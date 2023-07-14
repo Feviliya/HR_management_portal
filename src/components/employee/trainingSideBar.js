@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../assets/css-components/employeecss/sidebarTrain.css'
+import DonutPerform from '../../components/employee/donutperform'
 const TrainSideBar = () => {
   return (
     <div className='sidebar-train'>
@@ -15,7 +16,7 @@ const TrainSideBar = () => {
           <h6>Badges Recieved</h6>
           <p>1</p>
         </div>
-        
+        <DonutPerform></DonutPerform>
     </div>
   )
 }
