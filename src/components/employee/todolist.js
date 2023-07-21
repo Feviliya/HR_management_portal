@@ -64,7 +64,7 @@ class ToDo extends Component {
   
     render() {
         return (
-            <Container className="todo-box">
+            <Container className="todo-box cont">
                 <Row
                     style={{
                         display: "flex",

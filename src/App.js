@@ -14,7 +14,6 @@ import MyBenefits from './pages/employee/EmpDashBoard-contents/myBenefit';
 import MySalary from './pages/employee/EmpDashBoard-contents/mySalary';
 import CourseOpen from './components/employee/courseOpen';
 import EmpConnect from './pages/employee/EmpDashBoard-contents/empConnect';
-// import TimeSpent from './components/timeSpent';
 function App() {
   return (
           <BrowserRouter>
@@ -31,6 +30,7 @@ function App() {
             <Route path='/employee/dashboard/myBenefits' element={<MyBenefits></MyBenefits>}></Route>
             <Route path='/employee/dashboard/mySalary' element={<MySalary></MySalary>}></Route>
             <Route path='/employee/dashboard/myTraining/course' element={<CourseOpen></CourseOpen>}></Route>
+            
             <Route path='/employee/dashboard/connect' element={<EmpConnect></EmpConnect>}></Route>
           </Routes>
         </BrowserRouter>

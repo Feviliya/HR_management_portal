@@ -4,7 +4,7 @@ export const UserSlice = createSlice( {
   name:"user",
   initialState:{
     user:{
-        user:'fhgh'
+        user:'fhgh',
     },
   },
   reducers: {
@@ -18,5 +18,6 @@ export const UserSlice = createSlice( {
 })
 
 export const {login,logout}=UserSlice.actions;
-export const selectUser=(state)=>state.user.user;
+export const selectUser = (state) => state.user.user; 
+export const selectUserName = (state) => state.user.user.name;
 export default UserSlice.reducer;

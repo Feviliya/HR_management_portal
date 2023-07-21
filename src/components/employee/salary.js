@@ -1,8 +1,34 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import '../../assets/css-components/employeecss/salary.css'
 import SalaryChart from './salaryChart'
 import DoughnutChart from './salaryPie'
+import axios from 'axios'
 const Salary = () => {
+  const [userSalary,setSalary]=useState({});
+  const userId = localStorage.getItem('user');
+  const token=localStorage.getItem('token');
+  useEffect(() => {
+    const fetchUserDetails = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8080/api/v1/user/get/salary/${userId}`,
+        {
+          headers:{
+            "Authorization":`Bearer ${token}`,
+            "cache-control":'no-cache'
+          }
+        }
+        );
+        setSalary(response.data);
+        console.log(userSalary)
+      } catch (error) {
+        console.error('Error fetching user details:', error);
+      }
+    };
+
+    if (userId) {
+      fetchUserDetails();
+    }
+  }, []);
   return (
     <div className='sal-out'>
     <div className='salary'>
@@ -12,12 +38,12 @@ const Salary = () => {
         <div className='side-box-sal'>
           <div className='amount'>
             <i class="fi fi-rr-sack-dollar sal-icon"></i>
-              <h3>Rs.26,000 /-</h3>
+              <h3>{userSalary.total_pay}</h3>
               <p>Total pay amount</p>
           </div>
           <div className='amount'>
             <i class="fi fi-rs-wallet sal-icon"></i>
-              <h3>Rs.22,000 /-</h3>
+              <h3>{userSalary.final_pay}</h3>
               <p>Final paying amount</p>
           </div>
         </div>

@@ -1,28 +1,60 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import userImage from '../../../assets/user.png'
 import { Link } from 'react-router-dom'
 import '../../../assets/css-components/employeecss/dashEmpContents.css'
 import { Button } from '@mui/material'
-import { useSelector } from 'react-redux'
-import { selectUser } from '../../../redux/employee/userSlice'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { login } from '../../../redux/employee/userSlice'
+import axios from 'axios'
 const DashEmpContents = () => {
+  const [userDetails, setUserDetails] = useState({});
+  const userId = localStorage.getItem('user');
+  const token=localStorage.getItem('token');
 
-    const user=useSelector(selectUser);
+  const userData=useSelector((state)=>state.user.user);
+  const dispatch=useDispatch();
+
+  useEffect(() => {
+    const fetchUserDetails = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8080/api/v1/user/get/userDetails/${userId}`,
+        {
+          headers:{
+            "Authorization":`Bearer ${token}`,
+            "cache-control":'no-cache'
+          }
+        }
+        );
+
+        setUserDetails(response.data);
+        dispatch(login(response.data));
+        console.log(userDetails)
+      } catch (error) {
+        console.error('Error fetching user details:', error);
+      }
+    };
+
+    if (userId) {
+      fetchUserDetails();
+    }
+  }, [userId,token,dispatch]);
+
   return (
     <div className='dash-emp-contents'>
         <div className='user-details boxes'>
+
             <div className='pic-name'>
             <img alt='userpic' width="100px" src={userImage}></img>
-            <h3>{user.name}</h3>
+            <h3>{userDetails.name}</h3>
             </div>
           <br></br>
           <br></br>
-          <p>EMP ID : 280204</p>
-          <p>Department : Project Management</p>
-          <p>Email : feviliya28@gmail.com</p>
-          <p>D.O.B : 28/02/2004</p>
-          <p>Date of Join : 17/06/2023</p>
+          <p>EMP ID : {userId} </p>
+          <p>Department :{userDetails.department}</p>
+          <p>Email : {userDetails.email}</p>
+          <p>Phone :{userDetails.phone}</p>
+          <p>Date of Join :{userDetails.date_of_join}</p>
+          <p>Address : {userDetails.address}</p>
           <Link to='/employee/dashboard/updateProfile'><Button variant='contained'>Update Profile</Button></Link>
         </div>
         <div className='right-contents'>

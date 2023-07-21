@@ -10,6 +10,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import '../../assets/css-components/employeecss/attendance.css'
 import { Button, TextField } from '@mui/material';
 import Calendar from '../../components/employee/calendar'; 
+import axios from 'axios';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -19,8 +20,10 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 const AttendanceContents = () => {
   const[fromDate,setFromDate]=useState('');
   const[endDate,setEndDate]=useState('');
-  const [status,setStatus]=useState('Empty')
-  localStorage.setItem('status', status);
+  const [status,setStatus]=useState('Pending');
+  const [reason,setReason]=useState('');
+
+
   const handleFromDate=(event)=>{
     // event.preventDefault();
     setFromDate(event.target.value);
@@ -29,17 +32,44 @@ const AttendanceContents = () => {
     // event.preventDefault();
     setEndDate(event.target.value);
   }
+  const handleReason=(event)=>{
+    setReason(event.target.value);
+  }
   const [open, setOpen] = React.useState(false);
-  const handleSubmit=(event)=>{
+  const navigate=useNavigate();
+  const handleSubmit= async(event)=>{
     event.preventDefault();
     setOpen(true);
-    if(fromDate && endDate ){
+    let token=localStorage.getItem('token');
+    let id=localStorage.getItem('user');
+    try{
+      const response = await axios.post(`http://localhost:8080/api/v1/user/post/attendance/${id}`,
+      {
+        id:id,
+        leave_from_date:fromDate,
+        leave_to_date:endDate,
+        reason:reason,
+        leave_req_status:status
 
-      setStatus('Pending');
+      },
+      {
+        headers:{
+          "Authorization":`Bearer ${token}`,
+          "cache-control":'no-cache',
+        }
+      }
+      );
+      console.log(endDate)
+      setEndDate('');
+      setFromDate('');
+      setReason('');
+      setStatus('');
+      console.log(response.data);
+    }catch(error){
+      console.error("Error : ",error);
     }
     navigate('/employee/dashboard/myattendance')
   }
-  const navigate=useNavigate();
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
     return;
@@ -51,9 +81,6 @@ const AttendanceContents = () => {
   return (
     <div className='attend-contents' style={{'display':'flex'}}>
       <div>
-        {/* <LocalizationProvider className='calendar' dateAdapter={AdapterDayjs}>
-          <DateCalendar/>
-        </LocalizationProvider> */}
         <Calendar className='calendar'></Calendar>
         <br></br>
         <div className='att-boxes'>
@@ -64,19 +91,10 @@ const AttendanceContents = () => {
         <div className='tabs' >
             <form onSubmit={handleSubmit}>
               <div className='dates'>
-
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DemoContainer components={['DateField']} onChange={handleFromDate}  value={fromDate}>
-                    <DateField label="From" required/>
-                  </DemoContainer>
-                </LocalizationProvider>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DemoContainer components={['DateField']}  onChange={handleEndDate} value={endDate} required>
-                    <DateField label="To" required/>
-                  </DemoContainer>
-                </LocalizationProvider>
+                <input placeholder='From Date' className='from-date att-box' value={fromDate} onChange={handleFromDate}></input>
+                <input placeholder='To Date' className='to-date att-box' value={endDate} onChange={handleEndDate}></input>
                 <div className='reason'>
-                  <TextField  label='Reason' required></TextField>
+                  <input placeholder='Reason' className='reason att-box' value={reason} onChange={handleReason} label='Reason' required></input>
                   <Button variant='contained' type='submit' style={{'background-color':'rgb(72, 100, 177)'}}  className='request-leave'>Request Leave</Button>
                 </div>
               </div>
@@ -84,7 +102,7 @@ const AttendanceContents = () => {
             <br></br>
             <div className='att-boxes'>
               <h4>Leave Request status</h4>
-              <p>{localStorage.getItem('status')}</p>
+              <p>{status}</p>
             </div>
             <Snackbar  open={open} autoHideDuration={2000} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
