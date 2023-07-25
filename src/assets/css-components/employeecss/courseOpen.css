@@ -1,0 +1,19 @@
+.content-course{
+    display: flex;
+}
+.course-boxes{
+    margin: 30px;
+    padding: 20px;
+}
+.video{
+    width: 200px;
+}
+.vid-content{
+    display: flex;
+    gap: 5%;
+}
+.bar{
+    position: relative;
+    margin-left:55%;
+    margin-top: -2%;
+}

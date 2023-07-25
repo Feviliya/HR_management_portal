@@ -1,0 +1,48 @@
+.att-boxes{
+    box-shadow: 2px 2px 5px rgba(85, 126, 122, 0.922);
+    position: relative;
+    padding: 20px;
+}
+.tabs{
+    height: 50vh;
+    width: 50%;
+    box-shadow: 2px 2px 4px gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20%;
+}
+.attend-contents{
+    width: 90%;
+    gap: 15%;
+    padding: 30px 0px 0px 100px;
+}
+.calendar{
+    margin:50px ;
+}
+.tabs div h3{
+    color: rgb(72, 100, 177);
+    border-bottom: 2px solid rgb(72, 100, 177);
+}
+.attend-contents>div>button{
+    margin: 9%;
+    background-color: rgb(54, 116, 197);
+}
+.dates{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.reason{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.att-box{
+    padding: 5px;
+    border-bottom: 1px solid black;
+
+}
+.from-date , .to-date{
+    width: 40vh;
+}

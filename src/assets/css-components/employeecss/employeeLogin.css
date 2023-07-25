@@ -1,0 +1,41 @@
+#employeeMain{
+    display: flex;
+}
+.undraw{
+    width: 550px;
+    height: 450px;
+    padding-top: 17%;
+    padding-left: 20%;
+}
+.image{
+    background-color: rgb(24, 138, 180);
+    height: 100vh;
+    width: 50%;
+}
+.emp-box{
+    padding: 8% 5% 0% 5%;
+    width: 50%;
+    text-align: center;
+    height: 80.3vh;
+}
+#login-button{
+    width: 30%;
+    background-color:rgb(24, 138, 180) ;
+    padding: 10px;
+    margin: 5%;
+}
+#login-button:hover{
+    background-color:rgb(24, 138, 180) ;
+}
+#myCheckbox{
+    margin-left: -30%;
+}
+.ask{
+    text-align: center;
+    color: rgb(24, 138, 180) ;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.inp{
+    width: 65%;
+}

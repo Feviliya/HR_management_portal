@@ -1,0 +1,34 @@
+#chart{
+    transform: rotate(-90deg);
+}
+#side-panel-emp{
+    background-color: rgba(218, 220, 220, 0.674);
+    width: 9%;
+    display: flex;
+    flex-direction: column;
+    height: 85.8vh;
+}
+#side-panel-emp div p{
+    font-family: monospace;
+    
+}
+#side-panel-emp div{
+    align-items: center;
+    text-align: center;
+    padding-top: 35px;
+    cursor: pointer;
+    
+}
+#side-panel-emp a{
+    text-decoration: none;
+    color: rgb(72, 100, 177);
+}
+#side-panel-emp a:hover{
+    color: black;
+}
+#side-panel-emp div:hover{
+    background-color: rgba(132, 160, 232, 0.632);
+}
+#side-panel-emp div svg{
+    fill: rgb(82, 82, 84);
+}

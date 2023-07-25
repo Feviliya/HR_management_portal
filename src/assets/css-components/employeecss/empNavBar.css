@@ -1,0 +1,37 @@
+.nav-emp{
+    background-color: rgb(72, 100, 177);
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    gap: 63%;
+}
+.nav-ele-emp .links{
+    padding-left: 30px;
+    
+}
+.nav-ele-emp .connect button{
+    background-color: rgb(71, 164, 45);
+    color: white;
+    font-weight: bold;
+}
+.nav-ele-emp a> button {
+    color: white;
+    text-decoration: none;
+}
+.nav-ele-emp .connect button:hover{
+    background-color: rgb(103, 181, 82);
+    color: rgb(15, 0, 0);
+    transform: scale(1.05);
+    font-weight: bold;
+}
+.nav-ele-emp .logout button:hover{
+    background-color: rgb(188, 68, 68);
+    color: black;
+    transform: scale(1.05);
+    font-weight: bold;
+}
+.comp-name-emp{
+    color: white;
+    font-weight: bold;
+    padding-left: 20px;
+}

@@ -1,0 +1,14 @@
+.train-boxes{
+    border-top: 2px solid green;
+    padding: 40px;
+    box-shadow: 2px 2px 5px gray;
+}
+.course-date{
+    display: flex;
+    gap: 25%;
+    color: gray;
+    font-size: 15px;
+}
+.my-training{
+    padding: 40px;
+}
