@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .content-course{
     display: flex;
 }
@@ -16,4 +17,24 @@
     position: relative;
     margin-left:55%;
     margin-top: -2%;
+=======
+.content-course{
+    display: flex;
+}
+.course-boxes{
+    margin: 30px;
+    padding: 20px;
+}
+.video{
+    width: 200px;
+}
+.vid-content{
+    display: flex;
+    gap: 5%;
+}
+.bar{
+    position: relative;
+    margin-left:55%;
+    margin-top: -2%;
+>>>>>>> 4ecba5203710dfd87571a9ce43e3f03a9eb104c8
 }

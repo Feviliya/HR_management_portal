@@ -14,10 +14,13 @@ import MyBenefits from './pages/employee/EmpDashBoard-contents/myBenefit';
 import MySalary from './pages/employee/EmpDashBoard-contents/mySalary';
 import CourseOpen from './components/employee/courseOpen';
 import EmpConnect from './pages/employee/EmpDashBoard-contents/empConnect';
+<<<<<<< HEAD
 import AdminProjects from './pages/admin/adminProjects';
 import AdminCourse from './pages/admin/adminCourse';
 import AdminAttendance from './pages/admin/adminAttendance';
 import Feedback from './pages/feedback';
+=======
+>>>>>>> 4ecba5203710dfd87571a9ce43e3f03a9eb104c8
 function App() {
   return (
           <BrowserRouter>
@@ -25,11 +28,15 @@ function App() {
             <Route path='/' element={<Landing></Landing>}/>
             <Route path='/employee' element={<EmployeeLogin></EmployeeLogin>}/>;
             <Route path='/admin' element={<AdminLogin></AdminLogin>}/>;
+<<<<<<< HEAD
             <Route path='/user/feedback' element={<Feedback></Feedback>}></Route>
             <Route path='/admin/add-user' element={<AdminAddUser></AdminAddUser>}/>;
             <Route path='/admin/projects' element={<AdminProjects></AdminProjects>}></Route>
             <Route path='/admin/courses' element={<AdminCourse></AdminCourse>}></Route>
             <Route path='/admin/attendance' element={<AdminAttendance></AdminAttendance>}></Route>
+=======
+            <Route path='/admin/add-user' element={<AdminAddUser></AdminAddUser>}/>;
+>>>>>>> 4ecba5203710dfd87571a9ce43e3f03a9eb104c8
             <Route path='/employee/dashboard' element={<EmployeeDash></EmployeeDash>}/>
             <Route path='/employee/dashboard/updateProfile' element={<PersonalDetails></PersonalDetails>}></Route>
             <Route path='/employee/dashboard/myattendance' element={<MyAttendance></MyAttendance>}></Route>
@@ -38,6 +45,10 @@ function App() {
             <Route path='/employee/dashboard/myBenefits' element={<MyBenefits></MyBenefits>}></Route>
             <Route path='/employee/dashboard/mySalary' element={<MySalary></MySalary>}></Route>
             <Route path='/employee/dashboard/myTraining/course' element={<CourseOpen></CourseOpen>}></Route>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 4ecba5203710dfd87571a9ce43e3f03a9eb104c8
             <Route path='/employee/dashboard/connect' element={<EmpConnect></EmpConnect>}></Route>
           </Routes>
         </BrowserRouter>

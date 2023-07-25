@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 const { useState, useEffect } = React;
 
@@ -47,4 +48,55 @@ function TimeSpent() {
     );
 }
 
+=======
+import React from "react";
+const { useState, useEffect } = React;
+
+function TimeSpent() {
+    const [time, setTime] = useState(0);
+    const [intervalId, setIntervalId] = useState(null);
+    const [pageLoadTime, setPageLoadTime] = useState(Date.now());
+    const [isActive, setIsActive] = useState(true);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (isActive) {
+                setTime(Date.now() - pageLoadTime);
+            }
+        }, 1000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, [isActive, pageLoadTime]);
+
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            setIsActive(!document.hidden);
+            if (!document.hidden) {
+                setPageLoadTime(Date.now() - time);
+            }
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        return () => {
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+    }, [time]);
+
+    const formattedTime = React.useMemo(() => {
+        const minutes = Math.floor(time / 60000);
+        const seconds = ((time % 60000) / 1000).toFixed(0);
+        return `${minutes}:${(seconds < 10 ? '0' : '')}${seconds}`;
+    }, [time]);
+
+    return (
+        <div >
+            <p>{formattedTime}</p>
+        </div>
+    );
+}
+
+>>>>>>> 4ecba5203710dfd87571a9ce43e3f03a9eb104c8
 export default TimeSpent;

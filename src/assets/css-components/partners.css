@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .svg-partner{
     padding: 20px;
     fill: rgb(114, 135, 139);
@@ -5,4 +6,13 @@
 .partner-section{
     display: flex;
     justify-content: center;
+=======
+.svg-partner{
+    padding: 20px;
+    fill: rgb(114, 135, 139);
+}
+.partner-section{
+    display: flex;
+    justify-content: center;
+>>>>>>> 4ecba5203710dfd87571a9ce43e3f03a9eb104c8
 }

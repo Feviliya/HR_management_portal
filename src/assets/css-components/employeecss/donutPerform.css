@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .donut-training{
     margin-left: 20%;
 }
@@ -16,4 +17,24 @@
   
   .progress-bar::before {
     content: "75%";
+=======
+.donut-training{
+    margin-left: 20%;
+}
+  .progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(hotpink 75%, pink 0);    
+  }
+  
+  .progress-bar::before {
+    content: "75%";
+>>>>>>> 4ecba5203710dfd87571a9ce43e3f03a9eb104c8
   }
