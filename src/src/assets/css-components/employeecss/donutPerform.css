@@ -1,0 +1,19 @@
+.donut-training{
+    margin-left: 20%;
+}
+  .progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(hotpink 75%, pink 0);    
+  }
+  
+  .progress-bar::before {
+    content: "75%";
+  }
