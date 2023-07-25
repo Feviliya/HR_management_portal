@@ -1,0 +1,28 @@
+.add-user-box{
+    display: flex;
+    width: 100%;
+    margin-bottom:-200px
+}
+.left-user,.right-user{
+    display: flex;
+    padding: 50px 70px;
+    flex-direction: column;
+}
+.left-user .add-user-field,.right-user .add-user-field{
+    padding-bottom: 50px;
+}
+#AdminAddUser{
+    width: 100%;
+}
+.admin-contents{
+    display: flex;
+}
+.update-profile{
+    width: 100%;
+}
+.user-form-details{
+    margin:100px 0px 100px 90px;
+    display:flex;
+    flex-direction:column;
+}
+

@@ -1,0 +1,17 @@
+#about-land{
+    margin: 0% 5%;
+    display: flex;
+    gap: 5%;
+}
+.about-desc{
+    color: black;
+    background-color: rgb(147, 220, 247);
+    padding: 5%;
+    /* border-radius: 5%; */
+    box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.742);
+}
+.partners-heading{
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(81, 80, 80);
+}

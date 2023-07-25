@@ -1,0 +1,57 @@
+#Layer_1{
+    fill: rgb(72, 72, 72);
+}
+.dash-emp-contents{
+    display: flex;
+    margin: 1%;
+    position: relative;
+}
+.boxes{
+    margin: 2%;
+    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.728);
+    position: relative;
+}
+.right-contents{
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.user-details{
+    padding: 15px 50px;
+    width: 50%;
+}
+.user-details a button{
+    background-color: rgb(72, 100, 177);
+}
+.pic-name{
+    display: flex;
+    align-items: center;
+    gap: 15%;
+}
+.handbook, .ref{
+    padding: 20px;
+}
+.hand-book,.ref-mat{
+    text-decoration: none;
+    padding-left: 2%;
+    color: rgb(56, 86, 182);
+}
+.hand-book:hover,.ref-mat:hover{
+    color: rgb(43, 198, 226);
+}
+.sal{
+    background-color: rgb(72, 100, 177);
+    align-items: center;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+}
+.sal a button{
+    background-color: white;
+    color: black;
+}
+.sal button:hover{
+    background-color: rgb(209, 212, 212);
+}

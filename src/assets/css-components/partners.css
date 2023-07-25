@@ -1,0 +1,8 @@
+.svg-partner{
+    padding: 20px;
+    fill: rgb(114, 135, 139);
+}
+.partner-section{
+    display: flex;
+    justify-content: center;
+}

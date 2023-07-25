@@ -1,0 +1,36 @@
+.salary{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    gap: 5%;
+    width: 45%;
+}
+.stubs{
+    box-shadow: 2px 2px 4px gray;
+    height: 50vh;
+    padding: 2%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.amount{
+    box-shadow: 2px 2px 4px gray;
+    padding: 20px;
+    width: 39vh;
+    border-top: 2px solid rgb(45, 45, 163);
+}
+.side-box-sal{
+    display: flex;
+    gap: 5%;
+}
+.sal-out{
+    width: 90%;
+    display: flex;
+    padding: 20px;
+}
+.amount-desc{
+    box-shadow: 2px 2px 4px gray;
+    padding: 20px;
+    margin-top: 13.5%;
+    border-top: 2px solid rgb(45, 163, 161);
+}

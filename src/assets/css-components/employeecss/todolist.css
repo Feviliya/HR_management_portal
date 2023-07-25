@@ -1,0 +1,40 @@
+.todo-box{
+    width: 30%;
+    padding: 20px;
+    height: 80vh;
+    /* position: fixed; */
+    margin: 2%;
+    box-shadow: 2px 2px 5px gray;
+    background-color: aliceblue;
+}
+.list-items{
+    width: 100%;
+    display: flex;
+}
+.list-items span{
+    /* margin-left: 100px; */
+    display: flex;
+    padding: 10px;
+    gap: 5%;
+}
+.list-items div{
+    width: 100%;
+}
+.list-items .items{
+    width:100% ;
+}
+.ans-list{
+    align-items: center;
+}
+.items{
+    width: 80%;
+    border: none;
+}
+.mt-2{
+    background-color: rgb(12, 114, 151);
+    border: none;
+}
+.mt-2:hover{
+    background-color: rgb(109, 8, 8);
+    
+}
