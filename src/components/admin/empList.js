@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
+import { MDBBadge, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import axios from 'axios';
 const EmpList = () => {
   const[dataList,setData]=useState([]);
@@ -26,7 +26,7 @@ const EmpList = () => {
     if (userId) {
       fetchUserDetails();
     }
-  }, []);
+  }, [token,userId]);
   const DisplayData=dataList.map(
     (info)=>{
       return (
@@ -48,6 +48,10 @@ const EmpList = () => {
                 </div>
               </td>
               <td>
+              <p className='fw-normal mb-1'>{info.id}</p>
+
+              </td>
+              <td>
                 <p className='fw-normal mb-1'>{info.department}</p>
               </td>
               <td>
@@ -66,6 +70,7 @@ const EmpList = () => {
           <MDBTableHead>
             <tr>
               <th scope='col'>Name</th>
+              <th scope='col'>Id</th>
               <th scope='col'>Department</th>
               <th scope='col'>Date of Join</th>
               <th scope='col'>Phone</th>

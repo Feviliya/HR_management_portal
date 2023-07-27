@@ -20,7 +20,6 @@ const AdminProjects = () => {
         }
         );
         setProjects(response.data);
-        console.log(userProjects)
 
       } catch (error) {
         console.error('Error fetching user details:', error);

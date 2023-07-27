@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .bene-fits{
     width: 90%;
     padding: 30px;
@@ -9,16 +8,4 @@
 .health{
     display: flex;
     gap: 10%;
-=======
-.bene-fits{
-    width: 90%;
-    padding: 30px;
-}
-.image-card{
-    width: 50%;
-}
-.health{
-    display: flex;
-    gap: 10%;
->>>>>>> 4ecba5203710dfd87571a9ce43e3f03a9eb104c8
 }

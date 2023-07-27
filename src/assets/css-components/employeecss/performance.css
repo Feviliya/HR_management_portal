@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .perf-box{
     padding: 30px;
     display: flex;
@@ -16,35 +16,12 @@
 }
 .perform-boxes{
     box-shadow: 2px 2px 4px gray;
+    height: 50vh;
 }
 .perform-boxes{
     padding: 15px;
 }
 .cont{
     width: 600px;
-=======
-.perf-box{
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 5%;
-}
-.performance{
-    display: flex;
-    width: 100%;
-    margin-left: 20px;
-}
-.perf-box .perform-boxes{
-    width: 400px;
-    padding: 20px;
-}
-.perform-boxes{
-    box-shadow: 2px 2px 4px gray;
-}
-.perform-boxes{
-    padding: 15px;
-}
-.cont{
-    width: 600px;
->>>>>>> 4ecba5203710dfd87571a9ce43e3f03a9eb104c8
+
 }

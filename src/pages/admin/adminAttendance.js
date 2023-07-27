@@ -3,7 +3,7 @@ import AdminNavbar from '../../components/admin/adminNav'
 import AdminSidePanelEmp from '../../components/admin/adminSidePanel'
 import axios from 'axios'
 import '../../assets/css-components/admincss/adminAttend.css'
-import { MDBBadge,MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
+import { MDBBadge, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import { Button } from 'react-bootstrap'
 const AdminAttendance = () => {
     const [userAttendance,setAttendance]=useState([]);
@@ -20,7 +20,6 @@ const AdminAttendance = () => {
             }
             );
             setAttendance(response.data);
-            console.log(userAttendance)
     
           } catch (error) {
             console.error('Error fetching user details:', error);
@@ -28,7 +27,7 @@ const AdminAttendance = () => {
         };
     
         fetchUserDetails();
-      }, []);
+      }, [token,userAttendance]);
 
 
       const handleAccept = async (id) => {

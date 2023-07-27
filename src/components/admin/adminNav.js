@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '@mui/material'
-import logoutbtn from '../../assets/shutdown.png'
 import '../../assets/css-components/admincss/adminNav.css'
-import TimeSpent from '../timeSpent'
+// import logoutbtn from '../../assets/shutdown.png'
+// import TimeSpent from '../timeSpent'
 
-import { useDispatch, useSelector } from "react-redux";
-import { logout, selectUser } from '../../redux/employee/userSlice';
+// import { useDispatch, useSelector } from "react-redux";
+// import { logout, selectUser } from '../../redux/employee/userSlice';
 const AdminNavbar = () => {
   // const user = useSelector(selectUser);
   // const dispatch = useDispatch();

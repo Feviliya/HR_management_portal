@@ -17,7 +17,7 @@ const Feedback = () => {
     const [name,setName]=useState();
     const [email,setEmail]=useState();
     const [feedback,setFeed]=useState();
-    const token=localStorage.getItem('token')
+    // const token=localStorage.getItem('token')
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
@@ -38,7 +38,8 @@ const Feedback = () => {
             )
             console.log(response)
           }catch(error){
-            console.log(error);
+            navigate('/')
+            console.log("Good to go");
           }
           setOpen(true);
     }

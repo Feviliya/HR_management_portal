@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .footer{
     margin-top: 50px;
     padding: 20px;
@@ -27,34 +27,4 @@
 .foot-text a{
     color: rgb(162, 162, 164);
     text-decoration: none;
-=======
-.footer{
-    margin-top: 50px;
-    padding: 20px;
-    background-color: rgb(9, 95, 126);
-    height: 24vh;
-    align-items: center;
-}
-.foot-icons{
-    display: flex;
-    justify-content: center;
-    gap: 2%;
-    margin-top: 2%;
-}
-.foot-icons a {
-    transform: scale(1.5);
-    text-decoration: none;
-    color: rgb(162, 162, 164);
-}
-.foot-text{
-    color: rgb(162, 162, 164);
-    display: flex;
-    gap: 2%;
-    justify-content: center;
-    font-size: 15px;
-}
-.foot-text a{
-    color: rgb(162, 162, 164);
-    text-decoration: none;
->>>>>>> 4ecba5203710dfd87571a9ce43e3f03a9eb104c8
 }
