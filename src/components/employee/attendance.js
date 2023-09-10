@@ -7,11 +7,7 @@ import '../../assets/css-components/employeecss/attendance.css'
 import { Button} from '@mui/material';
 import Calendar from '../../components/employee/calendar'; 
 import axios from 'axios';
-<<<<<<< HEAD
 import TimeSpent from '../timeSpent';
-=======
-
->>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
@@ -20,14 +16,8 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 const AttendanceContents = () => {
   const [fromDate, setFromDate] = useState('');
   const [endDate, setEndDate] = useState('');
-<<<<<<< HEAD
   const [status, setStatus] = useState('No leave requests');
   const [reason, setReason] = useState('');
-=======
-  const [status, setStatus] = useState('Pending');
-  const [reason, setReason] = useState('');
-
->>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
   const handleFromDate = (event) => {
     setFromDate(event.target.value);
   };
@@ -104,11 +94,8 @@ const AttendanceContents = () => {
     navigate('/employee/dashboard/myattendance');
   };
 
-<<<<<<< HEAD
   
 
-=======
->>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
   return (
     <div className='attend-contents' style={{'display':'flex'}}>
       <div>
@@ -125,30 +112,18 @@ const AttendanceContents = () => {
                 <input placeholder='From Date' className='from-date att-box' type='date' value={fromDate} onChange={handleFromDate}></input>
                 <input placeholder='To Date' className='to-date att-box' type='date' value={endDate} onChange={handleEndDate}></input>
                 <div className='reason'>
-<<<<<<< HEAD
                   <input placeholder='Reason(with name)' disabled={attDetails.leave_req_status === 'Pending'} className='reason att-box' value={reason} onChange={handleReason} label='Reason' required></input>
                   <br></br>
                   <Button variant='contained' type='submit' disabled={attDetails.leave_req_status === 'Pending'} style={{'background-color':'rgb(72, 100, 177)','color':'white'}}  className='request-leave' >Request Leave</Button>
-=======
-                  <input placeholder='Reason(with name)' className='reason att-box' value={reason} onChange={handleReason} label='Reason' required></input>
-                  <br></br>
-                  <Button variant='contained' type='submit' style={{'background-color':'rgb(72, 100, 177)'}}  className='request-leave'>Request Leave</Button>
->>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
                 </div>
               </div>
             </form>
             <br></br>
             <div className='att-boxes'>
               <h4>Leave Request status</h4>
-<<<<<<< HEAD
               <p style={{'width':'50%','background-color':'rgb(247, 235, 178)', background: attDetails.leave_req_status === 'Granted' ? 'green' : 'inherit',color: attDetails.leave_req_status === 'Granted' ? 'white' : 'inherit', }}>{attDetails.leave_req_status}</p>
             </div>
             <Snackbar  open={open} autoHideDuration={2000}  onClose={handleClose}>
-=======
-              <p style={{'padding':'10px','width':'20%','background-color':'rgb(247, 235, 178)', background: attDetails.leave_req_status === 'Granted' ? 'green' : 'inherit',color: attDetails.leave_req_status === 'Granted' ? 'white' : 'inherit', }}>{attDetails.leave_req_status}</p>
-            </div>
-            <Snackbar  open={open} autoHideDuration={2000} onClose={handleClose}>
->>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
                     <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
                     Request Sent successfully
                     </Alert>

@@ -27,15 +27,9 @@ const CourseOpen = () => {
                 <br></br>
                 <div className='cont'>
                     <Link to='https://www.w3schools.com/KOTLIN/index.php'><Button>Referance materials</Button></Link>
-<<<<<<< HEAD
                     {/* <div className='bar'>
                         <ProgressChart></ProgressChart>
                     </div> */}
-=======
-                    <div className='bar'>
-                        <ProgressChart></ProgressChart>
-                    </div>
->>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
                 </div>
             </div>
         </div>
