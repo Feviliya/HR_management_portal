@@ -8,6 +8,7 @@ import { TextField } from '@mui/material'
 const DirectChatPage = () => {
   const [username, setUsername] = useState('');
   const userName = useSelector(selectUserName);
+<<<<<<< HEAD
   function createDirectChat(creds) {
 		getOrCreateChat(
 			creds,
@@ -15,6 +16,14 @@ const DirectChatPage = () => {
 			() => setUsername('')
 		)
 	}
+=======
+console.log(userName);
+  function createDirectChat(creds) {
+    getOrCreateChat(creds, { is_direct_chat: true, usernames: username }, () =>
+      setUsername('')
+    );
+  }
+>>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
 
   function renderChatForm(creds) {
     return (
@@ -45,7 +54,11 @@ const DirectChatPage = () => {
       height='75vh'
       userName={userName}
       userSecret="userpwd"
+<<<<<<< HEAD
       projectID='d4125d21-2f5b-4409-b65f-55df0bd1141d'
+=======
+      projectID='3c9cab73-f189-45d4-a2bc-41e3a615c3d6'
+>>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
       renderNewChatForm={(creds) => renderChatForm(creds)}
     />
   );

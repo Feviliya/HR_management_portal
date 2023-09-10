@@ -6,6 +6,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { PickersDay } from '@mui/x-date-pickers/PickersDay';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { DayCalendarSkeleton } from '@mui/x-date-pickers/DayCalendarSkeleton';
+<<<<<<< HEAD
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
@@ -49,11 +50,40 @@ function fakeFetch(date, { signal }) {
 const userId = localStorage.getItem('user');
 const token = localStorage.getItem('token');
 
+=======
+
+// function getRandomNumber(min, max) {
+//   return Math.round(Math.random() * (max - min) + min);
+// }
+
+/**
+ * Mimic fetch with abort controller https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort
+ * ⚠️ No IE11 support
+ */
+function fakeFetch(date, { signal }) {
+  return new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => {
+      const today=new Date();
+      // const daysInMonth = date.daysInMonth();
+      const daysToHighlight = [12,13];
+      daysToHighlight.push(today.getDate())
+      resolve({ daysToHighlight });
+    }, 500);
+
+    signal.onabort = () => {
+      clearTimeout(timeout);
+      reject(new DOMException('aborted', 'AbortError'));
+    };
+  });
+}
+
+>>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
 const initialValue = dayjs(new Date());
 
 function ServerDay(props) {
   const { highlightedDays = [], day, outsideCurrentMonth, ...other } = props;
 
+<<<<<<< HEAD
   // Format the day in the same "YYYY-MM-DD" format as highlightedDays
   const formattedDay = day.format('YYYY-MM-DD');
 
@@ -63,6 +93,14 @@ function ServerDay(props) {
   return (
     <Badge
       key={formattedDay} // Use formattedDay as the key
+=======
+  const isSelected =
+    !props.outsideCurrentMonth && highlightedDays.indexOf(props.day.date()) >= 0;
+
+  return (
+    <Badge
+      key={props.day.toString()}
+>>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
       overlap="circular"
       badgeContent={isSelected ? '✅' : undefined}
     >
@@ -72,10 +110,15 @@ function ServerDay(props) {
 }
 
 export default function DateCalendarServerRequest() {
+<<<<<<< HEAD
+=======
+  
+>>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
   const requestAbortController = React.useRef(null);
   const [isLoading, setIsLoading] = React.useState(false);
   const [highlightedDays, setHighlightedDays] = React.useState([]);
 
+<<<<<<< HEAD
   const addTodayToDateAPI = async () => {
     try {
       await axios.post(
@@ -93,6 +136,8 @@ export default function DateCalendarServerRequest() {
       console.error('Error adding today\'s date to the API:', error);
     }
   };
+=======
+>>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
   const fetchHighlightedDays = (date) => {
     const controller = new AbortController();
     fakeFetch(date, {
@@ -100,14 +145,22 @@ export default function DateCalendarServerRequest() {
     })
       .then(({ daysToHighlight }) => {
         setHighlightedDays(daysToHighlight);
+<<<<<<< HEAD
         console.log(daysToHighlight)
         setIsLoading(false);
       })
       .catch((error) => {
+=======
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        // ignore the error if it's caused by `controller.abort`
+>>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
         if (error.name !== 'AbortError') {
           throw error;
         }
       });
+<<<<<<< HEAD
       
     requestAbortController.current = controller;
   };
@@ -123,6 +176,22 @@ export default function DateCalendarServerRequest() {
 
   const handleMonthChange = (date) => {
     if (requestAbortController.current) {
+=======
+
+    requestAbortController.current = controller;
+  };
+
+  React.useEffect(() => {
+    fetchHighlightedDays(initialValue);
+    // abort request on unmount
+    return () => requestAbortController.current?.abort();
+  }, []);
+
+  const handleMonthChange = (date) => {
+    if (requestAbortController.current) {
+      // make sure that you are aborting useless requests
+      // because it is possible to switch between months pretty quickly
+>>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
       requestAbortController.current.abort();
     }
 
@@ -132,8 +201,14 @@ export default function DateCalendarServerRequest() {
   };
 
   return (
+<<<<<<< HEAD
     <LocalizationProvider disableFuture dateAdapter={AdapterDayjs}>
       <DateCalendar
+=======
+    <LocalizationProvider  disableFuture dateAdapter={AdapterDayjs}>
+      <DateCalendar
+      
+>>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
         defaultValue={initialValue}
         loading={isLoading}
         onMonthChange={handleMonthChange}
@@ -150,3 +225,9 @@ export default function DateCalendarServerRequest() {
     </LocalizationProvider>
   );
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> aca2027489c8a11dc84ff4ade36b408167209db7
