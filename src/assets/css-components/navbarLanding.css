@@ -1,0 +1,26 @@
+#navbar-land{
+    display: flex;
+    align-items: center;
+}
+.comp-name{
+    margin: 2% 5%;
+    font-weight: bolder;
+    color: rgb(12, 118, 156);
+}
+.nav-ele{
+    margin-left: 42.5%;
+}
+.nav-ele .links{
+    padding: 20px;
+    
+}
+.nav-ele .links Button{
+    background-color: rgb(12, 118, 156);
+    color: white;
+    font-weight: bold;
+}
+.nav-ele .links Button:hover{
+    background-color: rgba(116, 210, 244, 0.945);
+    color: rgb(23, 14, 50);
+}
+

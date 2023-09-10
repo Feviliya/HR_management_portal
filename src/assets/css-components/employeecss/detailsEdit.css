@@ -1,0 +1,21 @@
+.add-user-box{
+    display: flex;
+    /* width: 100%; */
+    padding: 0px 115px;
+    height: 70vh;
+}
+.left-user,.right-user{
+    display: flex;
+    flex-direction: column;
+}
+.add-user-box input{
+    width: 35vh;
+}
+#AdminAddUser{
+    width: 100%;
+}
+.update-profile{
+    width: 100%;
+    padding: 0;
+}
+

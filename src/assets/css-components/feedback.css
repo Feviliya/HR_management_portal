@@ -1,0 +1,23 @@
+.feedback-page{
+    background: url("https://www.pixelstalk.net/wp-content/uploads/2016/06/HD-Desktop-Wallpaper-Images.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+.main-feedback-form{
+    height: 60vh;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    gap: 15%;
+    padding: 3% 5%;
+    margin: 5%;
+    background-color: rgba(246, 249, 252, 0.562);
+    
+}
+.feedback-page>h3{
+    color: aliceblue;
+    padding-top: 5%;
+    padding-left: 16%;
+}
